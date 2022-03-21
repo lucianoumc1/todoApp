@@ -1,0 +1,8 @@
+.list-loading{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 25%;
+  text-align: center;
+}

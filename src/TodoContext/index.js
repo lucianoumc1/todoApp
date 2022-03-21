@@ -6,7 +6,10 @@ const TodoContext = React.createContext();
 
 const TodoProvider = (props) => {
 
-  const { item:todos, saveLocalStorage: setTodo} = useLocalStorage("TODOLIST_V1", [])
+  const { item: todos,
+          saveLocalStorage: setTodo, 
+          chargeState
+        } = useLocalStorage("TODOLIST_V1", [])
   const [ searchValue, setSearchValue ] = useState("");
   const [ hideValue, setHideValue ] = useState(false);
 
@@ -38,7 +41,6 @@ const TodoProvider = (props) => {
     })
     setTodo(result);
   }
-
   return(
     <TodoContext.Provider value={{
       todos,
@@ -49,11 +51,11 @@ const TodoProvider = (props) => {
       searchValue,
       setSearchValue,
       hideValue,
-      setHideValue
+      setHideValue,
+      chargeState
     }}>
       {props.children}
     </TodoContext.Provider>
   )
 }
-
 export { TodoContext, TodoProvider };
