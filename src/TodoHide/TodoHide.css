@@ -1,0 +1,15 @@
+.hide-completed__container{
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.hide-completed__container p{
+  font-weight: 700;
+}
+.hide-complete__icon{
+  height: 20px;
+  margin-right: 1rem;
+}

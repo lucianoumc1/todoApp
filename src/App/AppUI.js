@@ -1,18 +1,13 @@
 import { TodoCount } from "../TodoCount";
+import { TodoContext } from "../TodoContext";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
-import coverImage from "../images/task-image.jpg" 
+import { TodoHide } from "../TodoHide";
+import coverImage from "../images/task-image.png" 
 import "./App.css";
 
-export function AppUI({
-  defaultTodosValue,
-  onDeleteTodo,
-  onCompleteTodo,
-  filerTodos,
-  searchValue,
-  setSearchValue,
-}) {
+export function AppUI() {
   return (
     <main className="main">
       <div className="new-task__container">
@@ -24,21 +19,31 @@ export function AppUI({
         </div>
         <img className="new-task__cover" src={coverImage} />
       </div>
+
       <div className="your-task">
         <h2 className="your-task__tittle">Your tasks</h2>
-        <TodoCount list={defaultTodosValue} />
-        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
-        <TodoList>
-          {filerTodos.map((todo) => (
-            <TodoItem
+        <TodoCount />
+        <TodoSearch /> 
+
+        <TodoContext.Consumer>
+          {({ filterTodos,
+              onCompleteTodo,
+              onDeleteTodo 
+            }) => (
+            <TodoList>
+            {filterTodos.map((todo) => (
+              <TodoItem
               key={todo.tarea}
               value={todo.tarea}
               completed={todo.completed}
-              onDelete={onDeleteTodo}
               onComplete={onCompleteTodo}
-            />
-          ))}
-        </TodoList>
+              onDelete={onDeleteTodo}
+              />
+              ))}
+            </TodoList>
+          )}
+        </TodoContext.Consumer>
+        <TodoHide />
       </div>
     </main>
   );
