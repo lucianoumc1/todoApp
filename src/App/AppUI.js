@@ -6,34 +6,28 @@ import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { TodoHide } from "../TodoHide";
 import { Loading } from "../Loading";
-import coverImage from "../images/task-image.png";
+import { NewTask } from "../NewTask/Index";
 import "./App.css";
 
 export function AppUI() {
-  const { filterTodos,
-          onCompleteTodo, onDeleteTodo,
-          chargeState 
-        } = React.useContext(TodoContext);
+  const {
+    // filterTodos,
+    filterTodos,
+    onCompleteTodo,
+    onDeleteTodo,
+    chargeState,
+    openModal,
+    setOpenModal,
+  } = React.useContext(TodoContext);
 
   return (
     <main className="main">
-      <div className="new-task__container">
-        <div className="new-task__form">
-          <h2>Create a new task</h2>
-          <p>Task Name</p>
-          <input />
-          <button>Create task</button>
-        </div>
-        <img className="new-task__cover" src={coverImage} />
-      </div>
-
+      <NewTask/>
       <div className="your-task">
         <h2 className="your-task__tittle">Your tasks</h2>
         <TodoCount />
         <TodoSearch />
-        {chargeState === "Loading" && (
-          <Loading/>
-        )}
+        {chargeState === "Loading" && <Loading />}
         {chargeState === "Error" && "No se pudo acceder a la base de datos"}
         {chargeState === "Done" && (
           <>
