@@ -35,7 +35,7 @@ const TodoProvider = (props) => {
       if (el.tarea !== id) {
         return el;
       } else {
-        return { tarea: el.tarea, completed: el.completed?false:true }
+        return { tarea: el.tarea, completed: el.completed? false: true }
       }
     })
     setTodo(newTodoList);

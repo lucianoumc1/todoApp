@@ -1,0 +1,23 @@
+.task-detail__container{
+  height: 80vh;
+  width: 60vw;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2rem;
+  padding-left: 3rem;
+}
+.task-detail__container h4{
+  font-size: 3rem;
+  color: rgb(20, 19, 47);
+}
+.task-detail__container label{
+  display: block;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+.task-detail__container textarea{
+  width: 80%;
+  height: 20%;
+  text-align: start;
+  text-justify: distribute-all-liness;
+}

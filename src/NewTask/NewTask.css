@@ -1,6 +1,7 @@
 .new-task__container {
   width: 40%;
   height: 80vh;
+  max-height: 800px;
   background-color: rgba(255, 255, 255, 0.87);
   box-shadow: 0 0 15px -5px gray;
   border-radius: 15px;
@@ -45,6 +46,7 @@
 }
 .new-task__cover {
   width: 60%;
+  min-width: 300px;
   height: auto;
   margin: 0 auto;
 }

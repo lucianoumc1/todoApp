@@ -11,7 +11,6 @@ import "./App.css";
 
 export function AppUI() {
   const {
-    // filterTodos,
     filterTodos,
     onCompleteTodo,
     onDeleteTodo,

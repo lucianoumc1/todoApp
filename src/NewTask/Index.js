@@ -8,8 +8,8 @@ export function NewTask() {
   const { todos, setTodo } = useContext(TodoContext);
 
   const changeNewTaskName = (ev) => {
-    const taskNameLoweCase = ev.target.value.toLowerCase()
-    setNewTaskName(taskNameLoweCase)
+    const taskNameLowerCase = ev.target.value.toLowerCase()
+    setNewTaskName(taskNameLowerCase)
   }
 
   const saveNewTaskName = () => {
