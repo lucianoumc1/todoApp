@@ -35,7 +35,7 @@ export function NewTask() {
             Create task
           </button>
         </div>
-        <img className="new-task__cover" src={coverImage} />
+        <img className="new-task__cover" src={coverImage} alt="create-task"/>
       </div>
   )
 }
