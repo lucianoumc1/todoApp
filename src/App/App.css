@@ -5,6 +5,12 @@
   margin: 10vh auto;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+.main .new-task-btn {
+  position: absolute;
+  bottom: -70px;
+  right: 20px;
 }
 .your-task {
   width: 40%;
@@ -17,7 +23,15 @@
   -webkit-background-clip: text;
   background-color: #0093e9;
   color: #fff;
-  /* color: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); */
   font-size: 6rem;
   text-align: center;
+}
+
+@media (max-width:750px ) {
+  .your-task{
+    width: 100%;
+  }
+  .main .new-task__container {
+    display: none;
+  }
 }

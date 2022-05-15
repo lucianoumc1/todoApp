@@ -1,0 +1,4 @@
+Crear confirmacion al agregar una nueva nota.
+Poder agregar descripcion y visualizacion mas a detalle de cada nota.
+poner fecha con recordatorio
+que se haga focus al abrir el newtask.

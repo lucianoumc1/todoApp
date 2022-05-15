@@ -13,7 +13,7 @@ export function TodoHide() {
 
   return (
     <div className="hide-completed__container" onClick={onToggleHideCompleted}>
-    	<img className="hide-complete__icon" src={hideValue?viewIcon:hideIcon} />
+    	<img className="hide-complete__icon" src={hideValue?viewIcon:hideIcon} alt="hide-icon" />
       <p>{hideValue?"View Completed":"Hide Completed"}</p>
     </div>
   );

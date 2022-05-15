@@ -1,5 +1,5 @@
 .todo__tittle{
-    color: hsl(291deg 40% 35%);
+    color: var(--color-secondary);
     font-size: 2rem;
     text-align: center;
     font-weight: 700;

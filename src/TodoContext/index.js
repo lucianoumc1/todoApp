@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 const TodoContext = React.createContext();
 
 const TodoProvider = (props) => {
-
   const { item: todos,
           saveLocalStorage: setTodo, 
           chargeState

@@ -12,7 +12,8 @@ export function NewTask() {
     setNewTaskName(taskNameLowerCase)
   }
 
-  const saveNewTaskName = () => {
+  const saveNewTaskName = (e) => {
+    e.preventDefault()
     const newTask = { tarea: newTaskName, completed: false }
     let newTodoList = [...todos ]
     newTodoList.push(newTask)
@@ -22,19 +23,17 @@ export function NewTask() {
 
   return(
     <div className="new-task__container">
-        <div className="new-task__form">
+        <form className="new-task__form" onSubmit={saveNewTaskName}>
           <h2>Create a new task</h2>
-          <p>Task Name</p>
+          <p>Task name</p>
           <input
             value={ newTaskName }
             onChange={ changeNewTaskName }  
           />
-          <button
-            onClick={ saveNewTaskName }
-          >
-            Create task
+          <button type="submit" >
+            Create
           </button>
-        </div>
+        </form>
         <img className="new-task__cover" src={coverImage} alt="create-task"/>
       </div>
   )
