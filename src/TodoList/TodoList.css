@@ -6,11 +6,11 @@
 }
 .todo-list::-webkit-scrollbar{
   width: 10px;
-  background-color: rgba(230, 230, 230, 0.678);
+  background-color: var(--color-gray);
   border-radius: 10px;
 }
 .todo-list::-webkit-scrollbar-thumb{
   width: 14px;
-  background-color: #0093e9;
+  background-color: var(--color-blue);
   border-radius: 10px;
 }

@@ -1,12 +1,11 @@
 import "./TodoItem.css";
 
-export function TodoItem(props){
-    let { value } = props;
+export function TodoItem({ value, completed, onComplete, onDelete }){
     return(
-        <div className= {`note ${props.completed && "completed"}`}>
-            <span className={`item-check ${props.completed && "checked"}`} onClick={() => props.onComplete(value)} ></span>
+        <div className= {`note ${completed && "completed"}`}>
+            <span className={`item-check ${completed && "checked"}`} onClick={() => onComplete(value)} ></span>
             <li >{value}</li>
-            <span onClick={() => props.onDelete(value)} className="item-delete"></span>
+            <span onClick={() => onDelete(value)} className="item-delete"></span>
         </div>
     )
 }

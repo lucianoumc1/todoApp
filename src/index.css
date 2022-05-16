@@ -1,5 +1,7 @@
 :root {
   --color-secondary:#72367d;
+  --color-gray: rgba(255, 255, 255, 0.404);
+  --color-blue: #5ab2e5;
 }
 * {
   margin: 0;
